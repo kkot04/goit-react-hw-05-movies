@@ -1,0 +1,29 @@
+.header{
+    height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.form {
+    border: 3px solid gray;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.input{
+    background: gray;
+    color: white;
+    width: 87%;
+    height: 50px;
+    border: none;
+    outline: transparent;
+    font-size: 24px;
+    padding-left: 10px;
+}

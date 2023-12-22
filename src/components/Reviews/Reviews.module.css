@@ -1,0 +1,36 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.item{
+    width: 100%;
+    background-color: silver;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.span{
+    display: block;
+    margin-bottom: 10px;
+    line-height: 16px;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.text{
+    font-weight: normal;
+    line-height: 25px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.title{
+    text-align: center;
+}

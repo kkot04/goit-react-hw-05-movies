@@ -1,0 +1,13 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  font-size: 1.2rem;
+}
+
+.navlink {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
