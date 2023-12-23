@@ -1,6 +1,7 @@
 .homeTitle{
     text-align: center;
     margin: 20px auto;
+    color: rgb(255, 0, 166);
 }
 
 .homeList{
@@ -15,14 +16,13 @@
 
 .homeItem{
     display: flex;
-  flex-direction: column;
-
-  padding: 10px;
-  border: 2px solid silver;
+    flex-direction: column;
+    padding: 10px;
+    width: 350px;
 }
 
 .homeNavLink{
     text-decoration: none;
-    color: black;
-    font-weight: 700;
+    color: rgb(217, 28, 163);
+    font-weight: 500;
 }

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import {fetchMovies} from 'API/MovieApi'
+import {fetchMoviesTrend} from 'API/MovieApi'
 import s from './Home.module.css'
 
 
@@ -12,7 +12,7 @@ export const Home = () => {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        fetchMovies().then(res => setMovies(res.result));
+        fetchMoviesTrend().then(response => setMovies(response.results));
     }, [])
 
 
@@ -27,11 +27,15 @@ export const Home = () => {
                     state={{ from: location }}
                     to={`/movies/${movie.id.toString()}`}>
                         <p className={s.homeText}>{movie.title}</p>
-                        <p className={s.homeSubTitle}>{movie.media_type}</p>
-                        </NavLink>
+
+                    </NavLink>
                 </li>
             ))}
         </ul>
         </>
     )
 }
+
+export default Home
+
+
