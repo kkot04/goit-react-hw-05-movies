@@ -1,0 +1,26 @@
+.list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.item{
+    display: flex;
+  align-items: center;
+  flex-basis: 33%;
+  margin-bottom: 35px;
+}
+
+.title{
+    font-size: 20px;
+    color: tomato;
+    margin-top: 0;
+    margin-bottom: 6px;   
+}
+
+.text{
+    color: #a5a5a5;
+    font-size: 18px;
+}

@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { fetchMoviesCast } from 'API/MovieApi'
 import s from './Cast.module.css'
 
-const imgLink = 'https://image.tmdb.org/t/p/w500';
 
 export const Cast = () => {
   const {movieId} = useParams()
@@ -15,13 +14,13 @@ export const Cast = () => {
 
   return(
     <>
-    <ul>
+    <ul className={s.list}>
         {cast.length !== 0 ? (
             cast.map( item => (
-                <li key={item.id}>
+                <li key={item.id} className={s.item}>
                     
-                    <h3>{item.name}</h3>
-                    <span>
+                    <h3 className={s.title}>{item.name}</h3>
+                    <span className={s.text}>
                         <b>Role:</b> {item.character}
                     </span>
                 </li>
