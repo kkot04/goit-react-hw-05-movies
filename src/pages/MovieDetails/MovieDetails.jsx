@@ -19,24 +19,19 @@ const MovieDetails = () => {
     navigate(goBackRef.current);
   };
 
- 
-
- 
- 
+   
   return (
     <div>
       <button onClick={handleGoBack}>Go back</button>
       <div>
         <div>
           <h1>{movie.title}</h1>
-
           <span>{movie.tagline}</span>
           <p>{movie.overview}</p>
           <div>
             <span >
               <strong >Genres:</strong>
-
-              {movie.genres?.map(item => (
+                {movie.genres?.map(item => (
                 <span  key={item.id}>
                   {item.name}.
                 </span>
@@ -77,43 +72,3 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
-
-// const NavLinkWrapper = styled.div`
-//   margin: 30px auto;
-//   width: 1200px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `;
-
-// const StyledNavLink = styled(NavLink)`
-//   text-decoration: none;
-//   color: black;
-//   font-weight: 700;
-//   font-size: 30px;
-//   margin-left: 10px;
-//   &.active {
-//     color: tomato;
-//     text-decoration: underline;
-//   }
-//   &:hover {
-//     color: tomato;
-//   }
-// `;
-
-// const ButtonGoBack = styled.button`
-//   padding: 10px 12px;
-//   border-radius: 10px;
-//   border: 2px solid tomato;
-//   background-color: tomato;
-//   color: white;
-//   font-size: 20px;
-//   margin-left: 20px;
-//   cursor: pointer;
-//   transition: background-color 0.5s ease;
-
-//   &:hover {
-//     background-color: white;
-//     color: tomato;
-//   }
-// `;

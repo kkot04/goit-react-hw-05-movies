@@ -9,6 +9,8 @@ export const Home = () => {
 
     const location = useLocation()
 
+
+
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
