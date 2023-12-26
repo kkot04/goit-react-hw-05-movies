@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchMoviesCast } from 'API/MovieApi';
 
 
+
 const Cast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
@@ -12,9 +13,9 @@ const Cast = () => {
   }, [movieId]);
   return (
     <>
-      <ul>
-        {cast.length !== 0 ? (
+      {cast.length !== 0 ? (
           cast.map(item => (
+            <ul>
             <li key={item.id}>
               <div>
                 <h3>{item.name}</h3>
@@ -23,6 +24,7 @@ const Cast = () => {
                 </span>
               </div>
             </li>
+            </ul>
           ))
         ) : (
           <h2>
@@ -30,7 +32,7 @@ const Cast = () => {
             remain anonymous.
           </h2>
         )}
-      </ul>
+      
     </>
   );
 };

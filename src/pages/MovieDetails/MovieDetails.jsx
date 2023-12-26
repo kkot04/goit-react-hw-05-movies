@@ -2,6 +2,9 @@ import React, { Suspense, useEffect, useRef, useState } from 'react';
 import {NavLink, Outlet, useLocation, useNavigate, useParams} from 'react-router-dom';
 import { fetchMoviesById } from 'API/MovieApi';
 
+const imgLink = 'https://image.tmdb.org/t/p/w500';
+
+
 const MovieDetails = () => {
   const { movieId } = useParams();
 
@@ -25,6 +28,17 @@ const MovieDetails = () => {
       <button onClick={handleGoBack}>Go back</button>
       <div>
         <div>
+        {movie.poster_path === null ? (
+            <img
+              src={`https://images.app.goo.gl/7y7N8uyfeB8GR5PYA`}
+              alt={movie.title} />
+          ) : (
+            <img
+              src={`${imgLink + movie.poster_path}`}
+              alt={movie.title}
+             
+            />
+          )}
           <h1>{movie.title}</h1>
           <span>{movie.tagline}</span>
           <p>{movie.overview}</p>
