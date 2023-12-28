@@ -12,28 +12,17 @@ const Cast = () => {
     fetchMoviesCast(movieId).then(res => setCast(res.cast));
   }, [movieId]);
   return (
-    <>
-      {cast.length !== 0 ? (
-          cast.map(item => (
-            <ul>
-            <li key={item.id}>
-              <div>
-                <h3>{item.name}</h3>
-                <span>
-                  <b>Role:</b> {item.character}
-                </span>
-              </div>
-            </li>
-            </ul>
-          ))
-        ) : (
-          <h2>
-            We do not have information about the cast, or they have wished to
-            remain anonymous.
-          </h2>
-        )}
-      
-    </>
+    <div>
+    <h2>Cast</h2>
+    <ul>
+      {cast.map(item => (
+        <li key={item.id}>
+          <p>{item.name}</p>
+          <p>{item.character}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
   );
 };
 export default Cast;
